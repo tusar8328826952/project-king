@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="MovieHub - Your Ultimate Online Movies Streaming Platform">
+        <meta name="keywords" content="movies, streaming, entertainment, platforms">
+        <meta name="author" content="MovieHub">
+        <title>MovieHub - Online Streaming Hub</title>
+        <link rel="stylesheet" href="../css/mypage.css">
+    </head>
+    <body>
+        <!-- Floating Page Indicator -->
+        <div id="scrollIndicator" class="scroll-indicator">
+            <div id="scrollProgress" class="scroll-progress"></div>
+        </div>
+        
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon" aria-label="movie reel">🎬</span>
+                <span class="logo-text">MovieHub</span>
+            </div>
+            <h1 id="move">ONLINE MOVIES HUB</h1>
+        </header>
+        
+        <nav class="navbar" id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#platforms" class="nav-link">Platforms</a></li>
+                <li><a href="#genres" class="nav-link">Genres</a></li>
+                <li><a href="#popular" class="nav-link">Popular</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+        
+        <div class="controls-panel" role="toolbar" aria-label="Page controls">
+            <button id="scrollTopBtn" class="control-btn" title="Back to Top" aria-label="Scroll to top">⬆ Top</button>
+            <button id="toggleNavBtn" class="control-btn" title="Toggle Navigation" aria-label="Toggle navigation menu">☰ Menu</button>
+            <button id="themeToggleBtn" class="control-btn" title="Toggle Theme" aria-label="Toggle between dark and light theme">🌙 Theme</button>
+        </div>
+        
+        <main>
+            <!-- Streaming Platforms Section -->
+            <section id="platforms" class="streaming-services" aria-label="Popular streaming platforms">
+                <h2 class="services-title">Popular Streaming Platforms</h2>
+                <div class="services-container">
+                    <div class="service-card" onclick="openModal('imdb')" aria-label="IMDb details">
+                        <div class="service-logo" style="background-color: #FFB000; color: #000;">
+                            <span>IMDb</span>
+                        </div>
+                    </div>
+                    <div class="service-card" onclick="openModal('netflix')" aria-label="Netflix details">
+                        <div class="service-logo" style="background-color: #E50914;">
+                            <span>Netflix</span>
+                        </div>
+                    </div>
+                    <div class="service-card" onclick="openModal('youtube')" aria-label="YouTube details">
+                        <div class="service-logo" style="background-color: #FF0000;">
+                            <span>YouTube</span>
+                        </div>
+                    </div>
+                    <div class="service-card" onclick="openModal('prime')" aria-label="Prime Video details">
+                        <div class="service-logo" style="background-color: #146EB4;">
+                            <span>Prime Video</span>
+                        </div>
+                    </div>
+                    <div class="service-card" onclick="openModal('disney')" aria-label="Disney+ details">
+                        <div class="service-logo" style="background-color: #113CCF;">
+                            <span>Disney+</span>
+                        </div>
+                    </div>
+                    <div class="service-card" onclick="openModal('hulu')" aria-label="Hulu details">
+                        <div class="service-logo" style="background-color: #1CE783;">
+                            <span>Hulu</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Genres Section -->
+            <section id="genres" class="genres-section">
+                <h2 class="section-title">Browse by Genre</h2>
+                <div class="genres-container">
+                    <div class="genre-card" onclick="showGenreMovies('action')" style="cursor: pointer;">
+                        <span class="genre-icon">🎬</span>
+                        <h3>Action</h3>
+                        <p>High-octane adventures and thrilling sequences</p>
+                    </div>
+                    <div class="genre-card" onclick="showGenreMovies('comedy')" style="cursor: pointer;">
+                        <span class="genre-icon">😂</span>
+                        <h3>Comedy</h3>
+                        <p>Laugh out loud with hilarious entertainment</p>
+                    </div>
+                    <div class="genre-card" onclick="showGenreMovies('drama')" style="cursor: pointer;">
+                        <span class="genre-icon">💔</span>
+                        <h3>Drama</h3>
+                        <p>Emotional and compelling storytelling</p>
+                    </div>
+                    <div class="genre-card" onclick="showGenreMovies('horror')" style="cursor: pointer;">
+                        <span class="genre-icon">😨</span>
+                        <h3>Horror</h3>
+                        <p>Spine-chilling and suspenseful thrills</p>
+                    </div>
+                    <div class="genre-card" onclick="showGenreMovies('scifi')" style="cursor: pointer;">
+                        <span class="genre-icon">💫</span>
+                        <h3>Sci-Fi</h3>
+                        <p>Futuristic worlds and innovative concepts</p>
+                    </div>
+                    <div class="genre-card" onclick="showGenreMovies('romance')" style="cursor: pointer;">
+                        <span class="genre-icon">💕</span>
+                        <h3>Romance</h3>
+                        <p>Heartwarming love stories</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Movies Section -->
+            <section id="popular" class="popular-section">
+                <h2 class="section-title">Currently Popular</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <div class="movie-poster">🎭</div>
+                        <h3>Blockbuster Title</h3>
+                        <p class="movie-rating">⭐ 8.5/10</p>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">🎬</div>
+                        <h3>Award Winner</h3>
+                        <p class="movie-rating">⭐ 9.0/10</p>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">🍿</div>
+                        <h3>Fan Favorite</h3>
+                        <p class="movie-rating">⭐ 8.2/10</p>
+                    </div>
+                    <div class="movie-card">
+                        <div class="movie-poster">🎪</div>
+                        <h3>New Release</h3>
+                        <p class="movie-rating">⭐ 7.8/10</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about-section">
+                <h2 class="section-title">About MovieHub</h2>
+                <div class="about-content">
+                    <p>MovieHub is your ultimate destination for discovering and streaming content from the world's most popular entertainment platforms. With easy access to IMDb, Netflix, YouTube, Prime Video, Disney+, and Hulu, all in one place.</p>
+                    <p>We curate the best movies and shows across multiple genres to help you find exactly what you're looking for. Whether you enjoy action, comedy, drama, or sci-fi, MovieHub has something for everyone.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <span class="feature-icon">🌟</span>
+                            <p>Curated Content</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🔒</span>
+                            <p>Secure Access</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">📱</span>
+                            <p>Cross Platform</p>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <p>Fast & Reliable</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal for displaying platform details -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div id="modalLink">
+                    <button id="visitLink" class="modal-button" onclick="openPopupWindow()">Visit Website</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for displaying movies by genre -->
+        <div id="moviesModal" class="modal">
+            <div class="movies-modal-content">
+                <span class="modal-close" onclick="closeMoviesModal()">&times;</span>
+                <h2 id="genreTitle"></h2>
+                <div id="moviesGrid" class="movies-modal-grid"></div>
+            </div>
+        </div>
+
+        <!-- Popup Window for visiting links -->
+        <div id="popupWindow" class="popup-window">
+            <div class="popup-header">
+                <h3 id="popupTitle">Website</h3>
+                <div class="popup-controls">
+                    <button class="popup-btn" id="popupRefreshBtn" onclick="refreshPopupFrame()" title="Refresh">🔄</button>
+                    <button class="popup-btn" id="popupBackBtn" onclick="goBackPopup()" title="Back">⬅</button>
+                    <button class="popup-close" onclick="closePopupWindow()">&times;</button>
+                </div>
+            </div>
+            <div id="popupLoading" class="popup-loading">
+                <div class="spinner"></div>
+                <p>Loading website...</p>
+            </div>
+            <iframe id="popupFrame" class="popup-frame" frameborder="0" allow="geolocation; microphone; camera; payment; clipboard-read; clipboard-write; accelerometer; ambient-light-sensor; autoplay; encrypted-media; fullscreen; gyroscope; magnetometer; picture-in-picture; usb; vr; xr-spatial-tracking" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation allow-top-navigation-by-user-activation allow-modals allow-presentation allow-pointer-lock allow-downloads"></iframe>
+            <div class="popup-footer">
+                <p>You are visiting an external website</p>
+                <a id="popupExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="popup-external-btn">Open in New Tab</a>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <section id="download" class="download-section" aria-label="Movie download options">
+            <div class="download-container">
+                <h2>Download Movies</h2>
+                <p>Get your favorite movies to watch offline</p>
+                <div class="download-card">
+                    <div class="download-icon">📥</div>
+                    <h3>HD Movie File</h3>
+                    <p>High quality movie file for download</p>
+                    <a href="../../video.file" download="movie.file" class="download-btn" aria-label="Download movie file">
+                        ⬇ Download Movie
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 MovieHub. All rights reserved.</p>
+        </footer>
+    </body>
+    <script src="../js/mypage.js"></script>
+</html>
